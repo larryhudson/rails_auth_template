@@ -1,4 +1,4 @@
-# README
+# Rails authentication template
 
 This is just a simple Rails starter with authentication from scratch, following [this tutorial](https://medium.com/@wintermeyer/authentication-from-scratch-with-rails-5-2-92d8676f6836).
 
