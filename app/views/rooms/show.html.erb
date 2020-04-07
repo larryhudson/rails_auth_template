@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @room.name %></h1>
+<h2>Messages</h2>
+<p id="status"></p>
+<%= form_tag spotify_search_path, remote: true do |f| %>
+  <%= text_field_tag 'query' %>
+  <%= submit_tag %>
+<% end %>
+<div id="spotify-results">
+</div>
+<% @room.messages.each do |message| %>
+  <p><strong><%= message.user.username %></strong>: <%= message.text %> (<%= message.created_at %>)</p>
+<% end %>
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

@@ -1,0 +1,5 @@
+<ul>
+  <%= tracks.each do |track| %>
+    <li><%= track.name %> by <%= track.artists.map { |a| a.name } .join(", ") %> <%= link_to "Play", spotify_play_track_path(track_id: track.id, room_id: 1), remote: true %></li>
+  <% end %>
+</ul>
